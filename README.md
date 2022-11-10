@@ -1,6 +1,6 @@
 # DocumentData
 
-A package created to document datasets
+A package created to document datasets.
 
 # Install
 
