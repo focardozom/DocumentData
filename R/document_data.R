@@ -37,7 +37,7 @@ document_data <- function(x) {
 #'
 #' ", "@","usage data(",substitute(x),")
 #'
-#' ", "@","format A tibble with ", length(x), " rows and ", length(names(x))," variables:
+#' ", "@","format A tibble with ", nrow(x), " rows and ", length(names(x))," variables:
 #' ", "//describe","{","\n#' ",
       paste0("\\item{",colnames(x),"}{Type label here}",
              collapse =paste0("\n","#' ")),
