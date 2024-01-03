@@ -8,3 +8,5 @@ project*.tgz
 DocumentData.Rcheck/
 DocumentData*.tar.gz
 DocumentData*.tgz
+*.Rbui*
+*DocumentData.Rproj
