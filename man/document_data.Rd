@@ -2,26 +2,24 @@
 % Please edit documentation in R/document_data.R
 \name{document_data}
 \alias{document_data}
-\title{Document data}
-\usage{
-document_data(x)
-}
+\title{Document Data}
 \arguments{
-\item{x}{the name of data set to document. The dataset
-must be load in the R environment.}
+\item{x}{A dataset loaded in the R environment. The function extracts its
+name, type, class, dimensions, and column names for documentation.}
 }
 \value{
-an R file named as same as the dataset.
+This function generates an R script named after the dataset,
+which includes a structured documentation template. The template
+consists of the dataset's basic information and placeholders for detailed descriptions.
 }
 \description{
-Create an .R file containing information gathered from
-the data set to document. The variables' names are inserted
-in a roxygen template to facilitate the documentation process,
-and the row and column numbers are added to the description.
-
+\code{document_data} creates an .R file containing detailed documentation
+of a provided dataset. It automatically generates a template including
+variables' names, data types, row and column counts, and placeholders for further description.
 }
-\details{
-document_data
-
-
+\examples{
+\dontrun{
+  the_data <- as.data.frame(datasets::Titanic)
+  document_data(the_data)
+}
 }
