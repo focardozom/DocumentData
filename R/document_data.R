@@ -11,11 +11,14 @@
 #'
 #' @param x the name of data set to document. The dataset
 #'  must be load in the R environment.
+#'
 #' @return an R file named as same as the dataset.
+#'
 #' @export
 #'
 #'
 #' @examples
+#'
 #''\dontrun{
 #' the_data <- as.data.frame(datasets::Titanic)
 #' document_data(the_data)
