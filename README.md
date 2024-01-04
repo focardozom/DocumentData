@@ -6,7 +6,7 @@
 
 # DocumentData
 
-DocumentData is a specialized R package designed for documenting datasets efficiently and effectively. This package streamlines the process of creating comprehensive metadata, ensuring your datasets are well-documented and easier to understand for both current and future use.
+`DocumentData` is an R package designed to facilitate dataset documentation during package creation. This package provides a *roxygen2-style* documentation skeleton with pre-filled information, saving time on typing and reducing the likelihood of errors. This feature promotes the generation of well-structured and standardized documentation, which is essential for efficient data management and usability.
 
 # Install
 
