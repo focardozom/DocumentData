@@ -10,3 +10,4 @@ DocumentData*.tar.gz
 DocumentData*.tgz
 *.Rbui*
 *DocumentData.Rproj
+.DS_*
