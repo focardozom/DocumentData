@@ -2,9 +2,7 @@
 [![R-CMD-check](https://github.com/focardozom/DocumentData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/focardozom/DocumentData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-<p align="left">
-  <img width="100" height="100" src="./inst/hex_sticker_documenData.png">
-</p>
+<a href='https://github.com/focardozom/ChessOlympiad22'><img src="./inst/hex_sticker_documenData.png" align="right" width="150" /></a>
 
 # DocumentData
 
