@@ -1,4 +1,13 @@
 url: https://focardozom.github.io/DocumentData/
 template:
   bootstrap: 5
+  bslib:
+    base_font: {google: "Roboto"}
+    heading_font: {google: "Roboto Slab"}
+    code_font: {google: "JetBrains Mono"}
+
+footer:
+  structure:
+    left: developed_by
+    right: built_with
 
