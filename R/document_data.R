@@ -44,7 +44,7 @@ create_data_description <- function(dataset, name) {
   )
 
   variable_descriptions <- sapply(names(dataset), function(var) {
-    paste0("\\item{", var, "}{", class(dataset[[var]]), ": Type label here}")
+    paste0("\\item{", var, "} {", class(dataset[[var]]), ": Type label here}")
   }, USE.NAMES = FALSE)
 
   description_template <- paste0(
