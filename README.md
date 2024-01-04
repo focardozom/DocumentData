@@ -2,9 +2,7 @@
 [![R-CMD-check](https://github.com/focardozom/DocumentData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/focardozom/DocumentData/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-<a href='https://github.com/focardozom/ChessOlympiad22'><img src="./inst/hex_sticker_documenData.png" align="right" width="150" /></a>
-
-# DocumentData
+# DocumentData <a href="https://focardozom.github.io/DocumentData/"><img src="man/figures/logo.png" align="right" height="138" alt="DocumentData website" /></a>
 
 `DocumentData` is an R package designed to facilitate dataset documentation during package creation. This package provides a *roxygen2-style* documentation skeleton with pre-filled information, saving time on typing and reducing the likelihood of errors. This feature promotes the generation of well-structured and standardized documentation, which is essential for efficient data management and usability.
 
