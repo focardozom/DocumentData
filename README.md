@@ -20,5 +20,5 @@ This is a simple example of how the `document_data` function will create a file 
 
 ```
 the_data <- as.data.frame(datasets::Titanic)
-document_data(the_data)
+DocumentData::document_data(the_data)
 ```
