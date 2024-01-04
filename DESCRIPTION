@@ -12,5 +12,8 @@ Description: DocumentData is an R package designed to facilitate
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 URL: https://focardozom.github.io/DocumentData/
+Depends: 
+    R (>= 2.10)
+LazyData: true

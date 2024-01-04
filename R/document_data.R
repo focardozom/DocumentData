@@ -1,56 +1,58 @@
-#' document_data
+#' Document Data
 #'
-#' @name document_data
-#' @title Document data
 #' @description
-#' Create an .R file containing information gathered from
-#' the data set to document. The variables' names are inserted
-#' in a roxygen template to facilitate the documentation process,
-#' and the row and column numbers are added to the description.
+#' `document_data` creates an .R file containing detailed documentation
+#' of a provided dataset. It automatically generates a template including
+#' variables' names, data types, row and column counts, and placeholders for further description.
 #'
+#' @param x A dataset loaded in the R environment. The function extracts its
+#' name, type, class, dimensions, and column names for documentation.
 #'
-#' @param x the name of data set to document. The dataset
-#'  must be load in the R environment.
-#'
-#' @return an R file named as same as the dataset.
+#' @return This function generates an R script named after the dataset,
+#' which includes a structured documentation template. The template
+#' consists of the dataset's basic information and placeholders for detailed descriptions.
 #'
 #' @export
-#'
-#'
+#' @name document_data
 #' @examples
-#'
-#''\dontrun{
+#' \dontrun{
 #' the_data <- as.data.frame(datasets::Titanic)
 #' document_data(the_data)
-#'}
-#'@md
+#' }
+#' @md
 NULL
 
 document_data <- function(x) {
+  if (!exists(deparse(substitute(x)))) {
+    stop("The dataset does not exist in the current environment.")
+  }
 
-  document <-
-    paste0(
-      "
-#'", "@","title ", substitute(x),
-      "
-#'
-#' ", "@", "description describe your data set here
-#'
-#' ", "@","docType data
-#'
-#' ", "@","usage data(",substitute(x),")
-#'
-#' ", "@","format A tibble with ", nrow(x), " rows and ", length(names(x))," variables:
-#' ", "\\itemize","{","\n#' ",
-      paste0("\\item{",colnames(x),"}{Type label here}",
-             collapse =paste0("\n","#' ")),
-      "\n#'", "}","\n",
-      "'",
-      substitute(x),
-      "'")
+  if (!is.data.frame(x)) {
+    stop("The provided object is not a data frame.")
+  }
 
-  cat(document, file = paste("./", substitute(x),".R"))
-
+  dataset_name <- deparse(substitute(x))
+  data_description <- create_data_description(x, dataset_name)
+  file_name <- paste0("./", dataset_name, ".R")
+  cat(data_description, file = file_name)
 }
 
+create_data_description <- function(dataset, name) {
+  data_info <- paste0(
+    "A ", typeof(dataset), " [", class(dataset), "] with ",
+    nrow(dataset), " rows and ", length(names(dataset)), " variables:\n"
+  )
 
+  variable_descriptions <- sapply(names(dataset), function(var) {
+    paste0("\\item{", var, "}{", class(dataset[[var]]), ": Type label here}")
+  }, USE.NAMES = FALSE)
+
+  description_template <- paste0(
+    "#'", "@", "title ", name, "\n#'\n#' ", "@", "description describe your data set here\n#'\n#' ",
+    "@", "docType data\n#'\n#' ", "@", "usage data(", name, ")\n#'\n#' ",
+    "@", "format ", data_info, "#'\\itemize{\n#' ", paste(variable_descriptions, collapse = "\n#' "),
+    "\n#'}\n", "'", name, "'"
+  )
+
+  return(description_template)
+}
