@@ -31,4 +31,6 @@ the_data <- as.data.frame(datasets::Titanic)
 DocumentData::document_data(the_data)
 ```
 
-Thank you for considering `DocumentData` for your data documentation needs. I hope this tool makes your data management process smoother and more efficient. Should you have any questions, feedback, or suggestions, please feel free to reach out or contribute to the project. Happy documenting!
+Thank you for considering `DocumentData` for your data documentation needs. I hope this tool makes your data management process smoother and more efficient. Should you have any questions, feedback, or suggestions, please feel free to reach out or contribute to the project. 
+
+Happy documenting! :star::star::star:
