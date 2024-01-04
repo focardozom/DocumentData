@@ -16,7 +16,7 @@ Before installing `DocumentData`, you'll need to have `devtools` in your R setup
 install.packages("devtools")
 ```
 
-To install the DocumentData package, run the following code in your R environment:
+To install the `DocumentData` package, run the following code in your R environment:
 
 ```
 devtools::install_github("focardozom/DocumentData")
