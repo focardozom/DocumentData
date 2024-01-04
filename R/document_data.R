@@ -16,8 +16,8 @@
 #' @name document_data
 #' @examples
 #' \dontrun{
-#'   the_data <- as.data.frame(datasets::Titanic)
-#'   document_data(the_data)
+#' the_data <- as.data.frame(datasets::Titanic)
+#' document_data(the_data)
 #' }
 #' @md
 NULL
@@ -38,8 +38,10 @@ document_data <- function(x) {
 }
 
 create_data_description <- function(dataset, name) {
-  data_info <- paste0("A ", typeof(dataset), " [", class(dataset), "] with ",
-                      nrow(dataset), " rows and ", length(names(dataset)), " variables:\n")
+  data_info <- paste0(
+    "A ", typeof(dataset), " [", class(dataset), "] with ",
+    nrow(dataset), " rows and ", length(names(dataset)), " variables:\n"
+  )
 
   variable_descriptions <- sapply(names(dataset), function(var) {
     paste0("\\item{", var, "}{", class(dataset[[var]]), ": Type label here}")
