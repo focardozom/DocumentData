@@ -1,10 +1,14 @@
 Package: DocumentData
-Title: What the Package Does (One Line, Title Case)
+Title: Create roxygen2-styled documentation for datasets
 Version: 0.0.0.9000
 Authors@R: 
-    person("Francisco", "Cardozo", , "focardozom@github.com", role = c("aut", "cre"),
+    person("Francisco", "Cardozo", , "foc9@miami.edu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-1925-4954"))
-Description: Help to create documentation for dataset.
+Description: DocumentData is an R package designed to facilitate 
+  dataset documentation during package creation. 
+  This package provides a roxygen2-style documentation skeleton with 
+  pre-filled information, saving time on typing and reducing the 
+  likelihood of errors.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
