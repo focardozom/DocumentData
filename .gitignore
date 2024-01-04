@@ -11,3 +11,4 @@ DocumentData*.tgz
 *.Rbui*
 *DocumentData.Rproj
 .DS_*
+docs
