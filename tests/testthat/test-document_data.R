@@ -17,7 +17,7 @@ test_that("Error on non-data frame input", {
 
 # Adjusting the test to handle formatting and whitespace more flexibly
 test_that("Content in created file is correct", {
-  df <- data.frame(a = 1, b = "A")
+  df <- data.frame(a = 1, b = "A", stringsAsFactors = FALSE)
   document_data(df) # This should create "df.R" in the current directory
   file_name <- "df.R"
 
