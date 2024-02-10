@@ -37,15 +37,44 @@ document_data <- function(x) {
   cat(data_description, file = file_name)
 }
 
-create_data_description <- function(dataset, name) {
-  data_info <- paste0(
+#' Create Data Description
+#'
+#' Generates a detailed description of a dataset, including information about
+#' its type, class, dimensions (rows and columns), and a placeholder for each
+#' variable's description. This description is formatted as a string that could
+#' be used directly in R documentation files or other descriptive materials.
+#'
+#' @param dataset A data frame for which the description is to be generated.
+#' @param name The name of the dataset, which will be used in the title and usage
+#'        sections of the generated description.
+#'
+#' @return A character string containing the structured documentation template
+#'         for the dataset. This includes the dataset's basic information and
+#'         placeholders for detailed descriptions of each variable.
+#'
+#' @examples
+#' data(mtcars)
+#' description <- create_data_description(mtcars, "mtcars")
+#' cat(description)
+#'
+#' @export
+
+generate_data_info <- function(dataset) {
+  paste0(
     "A ", typeof(dataset), " [", class(dataset), "] with ",
     nrow(dataset), " rows and ", length(names(dataset)), " variables:\n"
   )
+}
 
-  variable_descriptions <- sapply(names(dataset), function(var) {
+generate_variable_descriptions <- function(dataset) {
+  sapply(names(dataset), function(var) {
     paste0("\\item{", var, "} {", class(dataset[[var]]), ": Type label here}")
   }, USE.NAMES = FALSE)
+}
+
+create_data_description <- function(dataset, name) {
+  data_info <- generate_data_info(dataset)
+  variable_descriptions <- generate_variable_descriptions(dataset)
 
   description_template <- paste0(
     "#'", "@", "title ", name, "\n#'\n#' ", "@", "description describe your data set here\n#'\n#' ",
@@ -56,3 +85,4 @@ create_data_description <- function(dataset, name) {
 
   return(description_template)
 }
+

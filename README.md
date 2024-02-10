@@ -1,5 +1,6 @@
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/focardozom/DocumentData/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/focardozom/DocumentData/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/focardozom/DocumentData/branch/main/graph/badge.svg)](https://app.codecov.io/gh/focardozom/DocumentData?branch=main)
 <!-- badges: end -->
 
 # DocumentData <a href="https://focardozom.github.io/DocumentData/"><img src="man/figures/logo.png" align="right" height="138" alt="DocumentData website" /></a>
